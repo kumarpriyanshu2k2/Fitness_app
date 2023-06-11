@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "159963796401",
+    "project_id": "priyanshu-act-now",
+    "storage_bucket": "priyanshu-act-now.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159963796401:android:0b21b90f25bdf70fa52390",
+        "android_client_info": {
+          "package_name": "com.example.fitness_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159963796401-7tkurobo2ebvk30ct0ajsph9sc9ni9t6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpCdf3AfninOWU0h47Q_p67h1DuFhijO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159963796401-7tkurobo2ebvk30ct0ajsph9sc9ni9t6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
