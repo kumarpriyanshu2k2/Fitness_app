@@ -48,7 +48,7 @@ class TextConstants {
   // Home screen
   static const String checkActivity = "Let's check your activity";
   static const String finished = "Finished";
-  static const String completedWorkouts = "Completed workouts";
+  static const String stepsCompleted = "Steps Completed";
 
   static const String inProgress = "In progress";
   static const String workouts = "Workouts";

@@ -7,6 +7,7 @@ import 'package:fitness_app/screens/tab_bar/bloc/tab_bar_bloc.dart';
 import 'package:fitness_app/screens/workouts/page/workouts_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fitness_app/screens/maps/maps2.dart';
 
 class TabBarPage extends StatelessWidget {
   const TabBarPage({Key? key}) : super(key: key);
@@ -57,6 +58,13 @@ class TabBarPage extends StatelessWidget {
           ),
           label: TextConstants.settingsIcon,
         ),
+        BottomNavigationBarItem(
+          icon: Image(
+            image: AssetImage(PathConstants.settings),
+            color: bloc.currentIndex == 3 ? ColorConstants.primaryColor : null,
+          ),
+          label: TextConstants.settingsIcon,
+        ),
       ],
       onTap: (index) {
         bloc.add(TabBarItemTappedEvent(index: index));
@@ -68,7 +76,8 @@ class TabBarPage extends StatelessWidget {
     final children = [
       HomePage(),
       WorkoutsPage(),
-      SettingsScreen()
+      SettingsScreen(),
+      LoadingScreen(),
       // Scaffold(
       //   body: Center(
       //     child: RawMaterialButton(

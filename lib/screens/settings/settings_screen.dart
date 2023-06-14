@@ -75,7 +75,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       photoUrl = user?.photoURL ?? null;
                     });
                   },
-                  style: TextButton.styleFrom(shape: CircleBorder(), backgroundColor: ColorConstants.primaryColor.withOpacity(0.16)),
+                  style: TextButton.styleFrom(shape: CircleBorder(), backgroundColor: ColorConstants.textWhite.withOpacity(0.16)),
                   child: Icon(Icons.edit, color: ColorConstants.primaryColor)),
             ]),
             SizedBox(height: 15),
@@ -99,7 +99,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SettingsContainer(
                 onTap: () => launch('https://perpet.io/'), child: Text(TextConstants.terms, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500))),
             SettingsContainer(
-                child: Text(TextConstants.signOut, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500)),
+                child: Text(TextConstants.signOut, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: ColorConstants.textWhite)),
                 onTap: () {
                   AuthService.signOut();
                   Navigator.pushReplacement(

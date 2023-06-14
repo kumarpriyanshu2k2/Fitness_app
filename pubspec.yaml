@@ -77,6 +77,18 @@ dependencies:
   #health connect
   health: ^6.0.0
 
+  #polylines_points
+  flutter_polyline_points: ^1.0.0
+
+  #geocoding
+  geocoding: ^2.1.0
+
+  #google_maps_flutter
+  geolocator: ^9.0.2
+  google_maps_flutter: ^2.3.0
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

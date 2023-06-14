@@ -71,7 +71,7 @@ class HomeStatistics extends StatelessWidget {
             ),
           ),
           Text(
-            TextConstants.completedWorkouts,
+            TextConstants.stepsCompleted,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 16,

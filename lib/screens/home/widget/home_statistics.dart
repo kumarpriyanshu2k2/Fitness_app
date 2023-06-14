@@ -4,8 +4,7 @@ import 'package:fitness_app/core/const/text_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pedometer/pedometer.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
+
 class HomeStatistics extends StatefulWidget {
   const HomeStatistics({Key? key}) : super(key: key);
 
@@ -126,13 +125,13 @@ class _HomeStatisticsState extends State<HomeStatistics> {
           Text(
             _steps.toString(),
             style: TextStyle(
-              fontSize: 48,
+              fontSize: 36,
               fontWeight: FontWeight.w700,
               color: ColorConstants.textWhite,
             ),
           ),
           Text(
-            TextConstants.completedWorkouts,
+            TextConstants.stepsCompleted,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 16,
