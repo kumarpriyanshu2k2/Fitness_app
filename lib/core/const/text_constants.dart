@@ -96,7 +96,7 @@ class TextConstants {
   static const String calendar = "Calendar";
   static const String reminder = "Reminder";
   static const String rateUsOn = "Rate us on ";
-  static const String terms = "Terms & Conditions";
+  static const String aboutus = "About Us";
 
   // Workout Details screen common
   static const String workout = "Workout";

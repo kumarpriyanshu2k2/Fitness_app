@@ -99,7 +99,7 @@ class StartWorkoutContent extends StatelessWidget {
   }
 
   Widget _createTitle() {
-    return Text(exercise.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold));
+    return Text(exercise.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: ColorConstants.textWhite));
   }
 
   Widget _createDescription() {
@@ -131,7 +131,7 @@ class StartWorkoutContent extends StatelessWidget {
                     Text(
                       TextConstants.nextExercise,
                       style: TextStyle(
-                        color: ColorConstants.grey,
+                        color: ColorConstants.textWhite,
                         fontSize: 17,
                         fontWeight: FontWeight.w600,
                       ),

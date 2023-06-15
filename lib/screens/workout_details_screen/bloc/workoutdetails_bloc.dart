@@ -10,19 +10,16 @@ part 'workoutdetails_state.dart';
 
 class WorkoutDetailsBloc extends Bloc<WorkoutDetailsEvent, WorkoutDetailsState> {
   final WorkoutData workout;
-  WorkoutDetailsBloc({required this.workout}) : super(WorkoutDetailsInitial());
-
-  @override
-  Stream<WorkoutDetailsState> mapEventToState(
-    WorkoutDetailsEvent event,
-  ) async* {
-    if (event is BackTappedEvent) {
-      yield BackTappedState();
-    } else if (event is WorkoutExerciseCellTappedEvent) {
-      yield WorkoutExerciseCellTappedState(
+  WorkoutDetailsBloc({required this.workout}) : super(WorkoutDetailsInitial()){
+    on<BackTappedEvent>((event, emit) {
+      emit(BackTappedState());
+    });
+    on<WorkoutExerciseCellTappedEvent>((event, emit) {
+      emit(WorkoutExerciseCellTappedState(
         currentExercise: event.currentExercise,
         nextExercise: event.nextExercise,
-      );
-    }
+      ));
+    });
   }
+
 }

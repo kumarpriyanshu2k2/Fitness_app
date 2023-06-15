@@ -7,22 +7,18 @@ part 'start_workout_event.dart';
 part 'start_workout_state.dart';
 
 class StartWorkoutBloc extends Bloc<StartWorkoutEvent, StartWorkoutState> {
-  StartWorkoutBloc() : super(StartWorkoutInitial());
+  StartWorkoutBloc() : super(StartWorkoutInitial()){
+    on<BackTappedEvent>((event, emit) {
+      emit(BackTappedState());
+    });
+    on<PlayTappedEvent>((event, emit) {
+      emit(PlayTimerState(time: event.time));
+    });
+    on<PauseTappedEvent>((event, emit) {
+      emit(PauseTimerState(currentTime: event.time));
+    });
+  }
 
   int time = 0;
 
-  @override
-  Stream<StartWorkoutState> mapEventToState(
-    StartWorkoutEvent event,
-  ) async* {
-    if (event is BackTappedEvent) {
-      yield BackTappedState();
-    } else if (event is PlayTappedEvent) {
-      time = event.time;
-      yield PlayTimerState(time: event.time);
-    } else if (event is PauseTappedEvent) {
-      time = event.time;
-      yield PauseTimerState(currentTime: time);
-    }
-  }
 }

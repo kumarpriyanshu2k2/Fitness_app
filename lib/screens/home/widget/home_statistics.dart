@@ -125,9 +125,17 @@ class _HomeStatisticsState extends State<HomeStatistics> {
           Text(
             _steps.toString(),
             style: TextStyle(
-              fontSize: 36,
+              fontSize: 24,
               fontWeight: FontWeight.w700,
               color: ColorConstants.textWhite,
+            ),
+          ),
+          Text(
+            "/10000",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: ColorConstants.grey,
             ),
           ),
           Text(

@@ -82,7 +82,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             Text(displayName, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             SizedBox(height: 15),
             SettingsContainer(
-              child: Text(TextConstants.reminder, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500)),
+              child: Text(TextConstants.reminder, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500,color: ColorConstants.textWhite)),
               withArrow: true,
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => ReminderPage()));
@@ -91,13 +91,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
             if (!kIsWeb)
               SettingsContainer(
                 child: Text(TextConstants.rateUsOn + '${Platform.isIOS ? 'App store' : 'Play market'}',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500)),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: ColorConstants.textWhite)),
                 onTap: () {
                   return launch(Platform.isIOS ? 'https://www.apple.com/app-store/' : 'https://play.google.com/store');
                 },
               ),
             SettingsContainer(
-                onTap: () => launch('https://perpet.io/'), child: Text(TextConstants.terms, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500))),
+                onTap: () => launch('https://perpet.io/'), child: Text(TextConstants.aboutus, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: ColorConstants.textWhite))),
             SettingsContainer(
                 child: Text(TextConstants.signOut, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: ColorConstants.textWhite)),
                 onTap: () {

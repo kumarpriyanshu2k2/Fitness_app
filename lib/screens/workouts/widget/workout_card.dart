@@ -43,10 +43,10 @@ class WorkoutCard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(workout.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                          Text(workout.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: ColorConstants.textWhite), ),
                           const SizedBox(height: 3),
                           Text(workout.exercices + " " + TextConstants.exercisesUppercase,
-                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: ColorConstants.grey),
+                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: ColorConstants.textWhite),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2),
                           const SizedBox(height: 3),

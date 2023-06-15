@@ -9,28 +9,24 @@ part 'reminder_event.dart';
 part 'reminder_state.dart';
 
 class ReminderBloc extends Bloc<ReminderEvent, ReminderState> {
-  ReminderBloc() : super(ReminderInitial());
+  ReminderBloc() : super(ReminderInitial()){
+    on<RepeatDaySelectedEvent>((event, emit) {
+      emit(RepeatDaySelectedState(index: event.index));
+    });
+    on<ReminderNotificationTimeEvent>((event, emit) {
+      emit(ReminderNotificationState());
+    });
+    on<OnSaveTappedEvent>((event, emit) {
+      emit(OnSaveTappedState());
+    });
+  }
 
   int? selectedRepeatDayIndex;
   late DateTime reminderTime;
   int? dayTime;
 
-  @override
-  Stream<ReminderState> mapEventToState(
-    ReminderEvent event,
-  ) async* {
-    if (event is RepeatDaySelectedEvent) {
-      selectedRepeatDayIndex = event.index;
-      dayTime = event.dayTime;
-      yield RepeatDaySelectedState(index: selectedRepeatDayIndex);
-    } else if (event is ReminderNotificationTimeEvent) {
-      reminderTime = event.dateTime;
-      yield ReminderNotificationState();
-    } else if (event is OnSaveTappedEvent) {
-      _scheuleAtParticularTimeAndDate(reminderTime, dayTime);
-      yield OnSaveTappedState();
-    }
-  }
+
+
 
   Future _scheuleAtParticularTimeAndDate(
       DateTime dateTime, int? dayTime) async {
