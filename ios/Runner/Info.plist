@@ -65,6 +65,10 @@
     <string>Can I have location always?</string>
     <key>NSUserTrackingUsageDescription</key>
     <string>appTrackingTransparency</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+    <string>comgooglemaps</string>
+    </array>
 
 </dict>
 </plist>

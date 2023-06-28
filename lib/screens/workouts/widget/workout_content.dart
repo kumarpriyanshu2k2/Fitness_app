@@ -26,7 +26,7 @@ class WorkoutContent extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Text('Workouts',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: ColorConstants.textWhite)),
           ),
           const SizedBox(height: 5),
           Expanded(

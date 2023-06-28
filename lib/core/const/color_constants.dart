@@ -20,4 +20,6 @@ class ColorConstants {
 
   static const cardioColor = Color(0xFFFCB74F);
   static const armsColor = Color(0xFF5C9BA4);
+
+  static const mapsColor = Color(0xFF1CA1DA);
 }

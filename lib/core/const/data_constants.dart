@@ -2,6 +2,7 @@ import 'package:fitness_app/core/const/path_constants.dart';
 import 'package:fitness_app/core/const/text_constants.dart';
 import 'package:fitness_app/data/exercise_data.dart';
 import 'package:fitness_app/data/workout_data.dart';
+import 'package:fitness_app/data/maps_data.dart';
 import 'package:fitness_app/screens/onboarding/widget/onboarding_tile.dart';
 
 class DataConstants {
@@ -242,6 +243,49 @@ class DataConstants {
             steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
           ),
         ]),
+  ];
+  static final List<MapsData> mapRoutes = [
+    MapsData(
+        title: TextConstants.cardioTitle,
+        exercices: TextConstants.cardioExercises,
+        minutes: TextConstants.cardioMinutes,
+        currentProgress: 10,
+        progress: 16,
+        image: PathConstants.cardio,
+        exerciseDataList: [
+          ExerciseData(
+            title: TextConstants.reclining,
+            minutes: TextConstants.recliningMinutes,
+            progress: 1,
+            video: PathConstants.recliningVideo,
+            description: TextConstants.warriorDescription,
+            steps: [
+              TextConstants.warriorStep1,
+              TextConstants.warriorStep2,
+              TextConstants.warriorStep1,
+              TextConstants.warriorStep2,
+              TextConstants.warriorStep1,
+              TextConstants.warriorStep2,
+            ],
+          ),
+          ExerciseData(
+            title: TextConstants.cowPose,
+            minutes: TextConstants.cowPoseMinutes,
+            progress: 0.3,
+            video: PathConstants.cowPoseVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.warriorPose,
+            minutes: TextConstants.warriorPoseMinutes,
+            progress: 0.99,
+            video: PathConstants.warriorIIVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+        ]),
+
   ];
 
   // Reminder

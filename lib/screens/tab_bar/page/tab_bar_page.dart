@@ -8,6 +8,7 @@ import 'package:fitness_app/screens/workouts/page/workouts_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fitness_app/screens/maps/maps2.dart';
+import 'package:fitness_app/screens/maps/page/maps_page.dart';
 
 class TabBarPage extends StatelessWidget {
   const TabBarPage({Key? key}) : super(key: key);
@@ -77,7 +78,8 @@ class TabBarPage extends StatelessWidget {
       HomePage(),
       WorkoutsPage(),
       SettingsScreen(),
-      LoadingScreen(),
+      MapsPage(),
+      //LoadingScreen(),
       // Scaffold(
       //   body: Center(
       //     child: RawMaterialButton(

@@ -16,7 +16,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
          emit(SignInButtonEnableChangedState(isEnabled: isButtonEnabled));
       }
     });
-    on<SignInTappedEvent>((event, emit) async*{
+    on<SignInTappedEvent>((event, emit) async{
       if (_checkValidatorsOfTextField()) {
         try {
           emit(LoadingState());

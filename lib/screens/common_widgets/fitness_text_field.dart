@@ -88,6 +88,7 @@ class _FitnessTextFieldState extends State<FitnessTextField> {
         color: _getUserNameColor(),
         fontSize: 14,
         fontWeight: FontWeight.w500,
+
       ),
     );
   }
@@ -98,7 +99,7 @@ class _FitnessTextFieldState extends State<FitnessTextField> {
     } else if (stateIsError) {
       return ColorConstants.errorColor;
     } else if (widget.controller.text.isNotEmpty) {
-      return ColorConstants.textWhite;
+      return ColorConstants.black;
     }
     return ColorConstants.grey;
   }
@@ -127,7 +128,7 @@ class _FitnessTextFieldState extends State<FitnessTextField> {
       textInputAction: widget.textInputAction,
       keyboardType: widget.keyboardType,
       style: TextStyle(
-        color: ColorConstants.textWhite,
+        color: ColorConstants.black,
         fontSize: 16,
       ),
       decoration: InputDecoration(

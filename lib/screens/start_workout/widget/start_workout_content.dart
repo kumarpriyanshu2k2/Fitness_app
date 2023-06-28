@@ -67,7 +67,8 @@ class StartWorkoutContent extends StatelessWidget {
                 const SizedBox(width: 17),
                 Text(
                   TextConstants.back,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500,color: ColorConstants.textWhite),
+
                 ),
               ],
             );
@@ -103,7 +104,7 @@ class StartWorkoutContent extends StatelessWidget {
   }
 
   Widget _createDescription() {
-    return Text(exercise.description, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500));
+    return Text(exercise.description, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500,color: ColorConstants.textWhite));
   }
 
   Widget _createSteps() {
@@ -148,7 +149,12 @@ class StartWorkoutContent extends StatelessWidget {
                     const SizedBox(width: 6.5),
                     Icon(Icons.access_time, size: 20),
                     const SizedBox(width: 6.5),
-                    Text('00:${nextExercise!.minutes > 10 ? nextExercise!.minutes : '0${nextExercise!.minutes}'}')
+                    Text('00:${nextExercise!.minutes > 10 ? nextExercise!.minutes : '0${nextExercise!.minutes}'}',
+                        style: TextStyle(
+                          color: ColorConstants.textWhite,
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600,
+                        )),
                     // BlocBuilder<StartWorkoutBloc, StartWorkoutState>(
                     //   buildWhen: (_, currState) => currState is PlayTimerState || currState is PauseTimerState,
                     //   builder: (context, state) {
@@ -215,7 +221,7 @@ class Step extends StatelessWidget {
           child: Center(child: Text(number, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: ColorConstants.primaryColor))),
         ),
         const SizedBox(width: 10),
-        Expanded(child: Text(description)),
+        Expanded(child: Text(description, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500,color: ColorConstants.textWhite))),
       ],
     );
   }

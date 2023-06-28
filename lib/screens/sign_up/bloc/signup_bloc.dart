@@ -20,7 +20,6 @@ class SignUpBloc extends Bloc<SignupEvent, SignUpState> {
     on<SignUpTappedEvent>((event, emit) async{
       if (checkValidatorsOfTextField()) {
         try {
-          print("cumming");
           emit( LoadingState());
           await AuthService.signUp(emailController.text, passwordController.text, userNameController.text);
           emit( NextTabBarPageState());

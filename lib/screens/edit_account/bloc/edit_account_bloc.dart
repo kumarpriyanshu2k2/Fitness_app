@@ -11,7 +11,7 @@ part 'edit_account_state.dart';
 
 class EditAccountBloc extends Bloc<EditAccountEvent, EditAccountState> {
   EditAccountBloc() : super(EditAccountInitial()){
-    on<UploadImage>((event, emit) async*{
+    on<UploadImage>((event, emit) async{
       try {
         final XFile? image =
             await ImagePicker().pickImage(source: ImageSource.gallery);
@@ -26,7 +26,7 @@ class EditAccountBloc extends Bloc<EditAccountEvent, EditAccountState> {
         emit( EditAccountInitial());
       }
     });
-    on<ChangeUserData>((event, emit) async* {
+    on<ChangeUserData>((event, emit) async {
       emit( EditAccountProgress());
       try {
         await UserService.changeUserData(
