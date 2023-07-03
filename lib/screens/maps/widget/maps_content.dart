@@ -61,7 +61,7 @@ class _MapsContentState extends State<MapsContent> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
-            TextConstants.discoverWorkouts,
+            TextConstants.increaseStep,
             style: TextStyle(
               color: ColorConstants.textWhite,
               fontSize: 18,
@@ -83,7 +83,7 @@ class _MapsContentState extends State<MapsContent> {
                     await LaunchApp.openApp(
                       androidPackageName: 'com.google.android.apps.maps',
                       iosUrlScheme: 'comgooglemaps://',
-                      appStoreLink: 'itms-apps://itunes.apple.com/us/app/pulse-secure/id945832041',
+                      appStoreLink: 'itms-apps://itunes.apple.com/us/app/google-maps/id585027354',
                       openStore: false
                     );
 
@@ -91,14 +91,7 @@ class _MapsContentState extends State<MapsContent> {
                     // The `openStore` argument decides whether the app redirects to PlayStore or AppStore.
                     // For testing purpose you can enter com.instagram.android
                   }),
-              const SizedBox(width: 15),
-              MapsCard(
-                  color: ColorConstants.mapsColor,
-                  map: DataConstants.mapRoutes[0],
-                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => WorkoutDetailsPage(
-                        workout: DataConstants.workouts[2],
-                      )))),
+              
               const SizedBox(width: 20),
             ],
           ),

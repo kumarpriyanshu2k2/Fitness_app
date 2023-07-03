@@ -246,12 +246,12 @@ class DataConstants {
   ];
   static final List<MapsData> mapRoutes = [
     MapsData(
-        title: TextConstants.cardioTitle,
-        exercices: TextConstants.cardioExercises,
-        minutes: TextConstants.cardioMinutes,
-        currentProgress: 10,
-        progress: 16,
-        image: PathConstants.cardio,
+        title: TextConstants.mapsTitle,
+        exercices: TextConstants.mapSub,
+        minutes: TextConstants.mapsDesc,
+        currentProgress: 0,
+        progress: 0,
+        image: PathConstants.maps,
         exerciseDataList: [
           ExerciseData(
             title: TextConstants.reclining,

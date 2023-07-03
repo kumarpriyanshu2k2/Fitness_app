@@ -48,7 +48,7 @@ class MapsCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      "${map.exercices} exercises",
+                      "${map.exercices} ",
                       style: TextStyle(
                         color: ColorConstants.black,
                         fontSize: 16,
@@ -57,7 +57,7 @@ class MapsCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      "${map.minutes} minutes",
+                      "${map.minutes} ",
                       style: TextStyle(
                         color: ColorConstants.black,
                         fontSize: 16,
@@ -70,7 +70,6 @@ class MapsCard extends StatelessWidget {
             ),
             Positioned(
               right: 0,
-              bottom: 0,
               child: Image(
                 image: AssetImage(map.image),
               ),

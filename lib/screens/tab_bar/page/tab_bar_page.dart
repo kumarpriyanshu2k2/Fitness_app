@@ -60,11 +60,11 @@ class TabBarPage extends StatelessWidget {
           label: TextConstants.settingsIcon,
         ),
         BottomNavigationBarItem(
-          icon: Image(
-            image: AssetImage(PathConstants.settings),
-            color: bloc.currentIndex == 3 ? ColorConstants.primaryColor : null,
+          icon: Icon(
+            Icons.map,
+            color: bloc.currentIndex == 3 ? ColorConstants.primaryColor : Colors.grey,
           ),
-          label: TextConstants.settingsIcon,
+          label: "Map",
         ),
       ],
       onTap: (index) {

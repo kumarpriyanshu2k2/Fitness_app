@@ -3,12 +3,12 @@ class TextConstants {
   static const String start = "Start";
 
   // Onboarding
-  static const String onboarding1Title = "Workout anywhere";
-  static const String onboarding2Title = "Learn techniques";
+  static const String onboarding2Title = "Workout anywhere";
+  static const String onboarding1Title = "Save environment";
   static const String onboarding3Title = "Stay strong & healthy";
 
-  static const String onboarding1Description = "You can do your workout at home without any equipment, outside or at the gym.";
-  static const String onboarding2Description = "Our workout programs are made by professionals.";
+  static const String onboarding2Description = "You can do your workout at home without any equipment, outside or at the gym.";
+  static const String onboarding1Description = "Act Now plants a tree everytime you hit the target";
   static const String onboarding3Description = "We want you to fully enjoy the program and stay healthy and positive.";
 
   // Sign Up
@@ -57,6 +57,7 @@ class TextConstants {
   static const String minutes = "Minutes";
 
   static const String discoverWorkouts = "Discover new workouts";
+  static const String increaseStep = "Increase your step counts use Google maps";
 
   static const String keepProgress = "Keep the progress!";
   static const String profileSuccessful = "You are more successful than 88% users.";
@@ -65,6 +66,11 @@ class TextConstants {
   static const String cardioTitle = "Cardio";
   static const String cardioExercises = "10";
   static const String cardioMinutes = "50";
+  // Maps screen -> detail card
+  static const String mapsTitle = "Maps";
+  static const String mapSub = "open";
+  static const String mapsDesc = "Google maps";
+
 
   // Home screen -> arms card
   static const String armsTitle = "Arms";
